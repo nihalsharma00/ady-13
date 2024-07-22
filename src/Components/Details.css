@@ -1,0 +1,355 @@
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #920892, #170ac9); /* Gradient background */
+    color: #333; /* Ensure text remains black */
+    text-align: center; /* Center-align text */
+}
+
+/* Head Detail Styling */
+.headDetail {
+    display: flex;
+    justify-content: center; /* Center-align content horizontally */
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: slideIn 0.5s ease-out; /* Slide in effect */
+    margin: 0 auto; /* Center align the container */
+    width: 90%; /* Set width to be responsive */
+}
+
+/* Button Styling */
+.detailBtn {
+    color: green;
+    border: 2px solid green;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(90deg, #4CAF50, #aa2723); /* Horizontal gradient background */
+    display: inline-block; /* Align buttons in line with text */
+}
+
+.detailBtn:hover {
+    background: linear-gradient(90deg, #388E3C, #b31515); /* Darker horizontal gradient */
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); /* Pop-up effect */
+}
+
+/* Top Division Styling */
+.topDiv {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center-align children horizontally */
+    width: 70%;
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6)); /* Horizontal gradient */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-out; /* Slide in effect */
+}
+
+/* Like and Share Styling */
+.likeShare {
+    width: 100%; /* Full width to center items */
+    display: flex;
+    justify-content: center; /* Center-align items horizontally */
+    position: relative;
+}
+
+.icons {
+    display: flex;
+    gap: 20px;
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+/* Detail Side Styling */
+.detailSide {
+    width: 70%;
+    margin: 0 auto; /* Center align the container */
+}
+
+.detailSide h1 {
+    color: #333; /* Ensure text remains black */
+    font-size: 2rem;
+    transition: color 0.3s;
+}
+
+.detailSide h1:hover {
+    color: #ff6f61;
+}
+
+.detailcontent {
+    margin: 0 auto; /* Center align the container */
+}
+
+.detailcontent > img {
+    width: 100%;
+    height: 22vw;
+    filter: drop-shadow(0 0 3px gray);
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: linear-gradient(90deg, #684141, #f0f0f0); /* Horizontal gradient effect */
+}
+
+.detailcontent > img:hover {
+    transform: scale(1.1); /* Pop-up effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(90deg, #f5f5f5, #b46767); /* Darker horizontal gradient */
+}
+
+.detailcontent > p {
+    margin: 25px auto;
+    font-size: 1.5rem;
+    text-align: center; /* Center-align text */
+}
+
+/* Static Content Styling */
+.staticContent {
+    margin: 20px auto; /* Center-align container */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center-align children horizontally */
+}
+
+/* Admin Styling */
+.admin {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center-align children horizontally */
+}
+
+.admin > img {
+    width: 7vw;
+    height: 6vw;
+    border-radius: 50%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: linear-gradient(90deg, #4226bd, #b40cd6); /* Horizontal gradient effect */
+}
+
+.admin > img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(90deg, #570542, #1a0457); /* Darker horizontal gradient */
+}
+
+.admin div p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 13px;
+    text-align: center; /* Center-align text */
+}
+
+.fontIcons {
+    font-size: 20px;
+    display: flex;
+    justify-content: center; /* Center-align icons */
+}
+
+.fontIcons > i {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+/* Bottom Like Styling */
+.bottomLike {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align items horizontally */
+    gap: 20px;
+}
+
+/* Back Button Styling */
+.goBackBtn {
+    z-index: 5;
+    background-color: black;
+    color: white;
+    padding: 8px 15px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    position: fixed;
+    left: 25px;
+    top: 25px;
+}
+
+.goBackBtn:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.05); /* Pop-up effect */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1000px) {
+    .topDiv {
+        width: 80%;
+    }
+
+    .admin div p {
+        margin-bottom: 8px;
+    }
+
+    .admin > img {
+        width: 8vw;
+        height: 7vw;
+    }
+
+    .detailcontent p {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .topDiv {
+        width: 85%;
+    }
+
+    .detailcontent p {
+        font-size: 24px;
+    }
+
+    .admin div p {
+        margin-bottom: 5px;
+    }
+
+    .admin > img {
+        width: 9vw;
+        height: 8vw;
+    }
+
+    .fontIcons {
+        margin-right: 45px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .topDiv {
+        width: 90%;
+    }
+
+    .likeShare {
+        width: 27%;
+    }
+
+    .detailSide {
+        width: 70%;
+    }
+
+    .detailcontent p {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .likeShare {
+        display: none;
+    }
+
+    .detailSide {
+        width: 75%;
+    }
+
+    .detailcontent img {
+        height: 30vw;
+    }
+
+    .admin img {
+        width: 12vw;
+        height: 11vw;
+    }
+
+    .detailcontent p {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .logo > h1 {
+        margin-left: -13px;
+        margin-top: 6px;
+    }
+
+    .headDetail {
+        border-bottom: 2px solid teal;
+        justify-content: center; /* Center-align content */
+        column-gap: 5px;
+    }
+
+    .likeShare {
+        display: none;
+    }
+
+    .topDiv {
+        width: 100%;
+    }
+
+    .detailSide {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .detailSide h1 {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .detailcontent img {
+        height: 45vw;
+    }
+
+    .admin {
+        margin-left: 0;
+    }
+
+    .admin div {
+        text-align: center; /* Center-align text */
+    }
+
+    .admin img {
+        width: 14vw;
+        height: 13vw;
+    }
+
+    .detailcontent p {
+        font-size: 18px;
+    }
+
+    .bottomLike .icons {
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+
+    .staticContent {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center; /* Center-align content */
+        gap: 20px;
+    }
+}
+
+/* Keyframes for Slide-In Animation */
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
